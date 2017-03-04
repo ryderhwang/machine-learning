@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11809,6 +11809,16 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>//anaconda/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
+//anaconda/lib/python2.7/site-packages/sklearn/learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
+  DeprecationWarning)
+</pre>
+</div>
+</div>
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
@@ -11851,7 +11861,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
@@ -11925,7 +11935,10 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>An increase in 'RM' would lead to an increase in 'MEDV'.  An increase in 'LSTAT' would lead to a decrease in 'MEDV'.  An increase in 'PTRATIO' would lead to a increase in 'MEDV'</p>
+<p><strong>Answer: </strong>
+For 'RM'.  An increase in 'RM' would lead to an increase in 'MEDV'.  Because it is intuitive and make sense to me that home with more rooms is more expensive than home with less rooms. 
+For 'LSTAT'.  An increase in 'LSTAT' would lead to a decrease in 'MEDV'. Because a richer neighborhood could mean a lot of things, could mean quiter, low crime rate.  Therefore I think the higher percentage of poor people in town, the lower the home price would be.
+For'PTRATIO'.  I think it is not so relevant with home prices, because this 'PTRATIO' could have a lot of different interpretations.  It is falst that this could be a major factor of 'MEDV'</p>
 
 </div>
 </div>
@@ -13728,7 +13741,7 @@ S3rGGGOChiU9Y4wxQeP/AbMlLQzVGLlRAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>k-fold cross-validation is running k separate learning experiments.  Each experiments pick a testing test.  Others are the training set.  It takes more time but get more accurate result.  Grid search with out cross-validation would have less accuracy because the training and test selection is more arbitrary and less general.</p>
+<p><strong>Answer: </strong>k-fold cross-validation is running k separate learning experiments.  Each experiments pick a testing test.  Others are the training set.  It takes more time but get more accurate result.  Grid search with out cross-validation would have less accuracy because the training and test selection is more arbitrary and less general.  Because with k-fold cross-validation.  The set is separate in k subsets.  Each subset has a chance to be the testing set since we run the experiment k times and choose each subset once to be the test set and others to be the training set.  This technique maximize both the training and testing data so that the data we can use th provide best learning result and best validation.  This is extremely useful when the dataset has limited size.  If we limit grid search with a single dataset, overfitting would happen because our testing set is arbitrary, and we could over learned this training and testing set and if we change to other testing set, it could have a low match.</p>
 
 </div>
 </div>
